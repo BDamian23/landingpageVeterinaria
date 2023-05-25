@@ -124,7 +124,93 @@
           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px"></textarea>
           <label for="floatingTextarea">Qué necesitas saber?</label>
         </div>
+        <div class="buttons col-12 d-flex gap-1">
+          <button id="btnEnviar" type="submit" class="btn col-12">Enviar</button>
+      </div>
       </form>     
+    </section>
+
+    <section id="donacion">
+      <div class="donacion">
+  
+        <div class="descripcion d-flex justify-content-between align-items-center flex-row-reverse">
+          <div class="texto mx-2">
+            <h3 class="text-center">Necesitamos tu ayuda!!!</h3>
+            <p class="text-center">A modo de agregado, con tu compra de un "ticket hueso" tendrás un descuento en tu proxima compra, el dinero recaudado sera destinado a las fundaciones de rescate de mascotas en la calle</p>
+          </div>
+          <div>
+            <img src="assets/images/fundacion.webp" alt="fundacion">
+          </div>
+        </div>
+
+        <div class="cards container">
+          <div class="card-group gap-3 d-flex justify-content-between flex-wrap">
+
+              <div class="btn card border border-2 border-muted bg-transparent" id="card-1">
+                  <div class="card-body text-center card-donacion">
+                      <h5 class="card-title">Hueso de Oro</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="card-text">80%</p>
+                      <p class="card-text"><small class="text-body-secondary">$2000</small></p>
+                  </div>
+              </div>
+
+              <div class="btn card border border-2 border-muted bg-transparent" id="card-2">
+                  <div class="card-body text-center card-donacion">
+                      <h5 class="card-title">Hueso de Plata</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="card-text">50%</p>
+                      <p class="card-text"><small class="text-body-secondary">$1000</small></p>
+                  </div>
+              </div>
+
+              <div class="btn card border border-2 border-muted bg-transparent" id="card-3">
+                  <div class="card-body text-center card-donacion">
+                      <h5 class="card-title">Hueso de Bronce</h5>
+                      <p class="card-text">Tienen un descuento</p>
+                      <p class="card-text">15%</p>
+                      <p class="card-text"><small class="text-body-secondary">$500</small></p>
+                  </div>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="formulario container my-5">
+          <form name="formulario" class="row g-3">
+              <div class="col-md-6">
+                  <input name="nombre" type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+              </div>
+              <div class="col-md-6">
+                  <input name="apellido" type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+              </div>
+              <div class="col-12">
+                  <input name="email" type="text" class="form-control" id="inputCorreo" placeholder="Correo">
+              </div>
+              <div class="col-md-6">
+                  <label for="inputCantidad" class="form-label">Cantidad</label>
+                  <input name="tickets" type="number" class="form-control" id="inputCantidad" placeholder="Cantidad">
+              </div>
+              <div class="col-md-6">
+                  <label for="inputCategoria" class="form-label">Categoria</label>
+                  <select name="categoria" id="inputCategoria" class="form-select">
+                      <option value="none" selected>Elige una Categoria</option>
+                      <option value="0">Hueso de Oro</option>
+                      <option value="1">Hueso de Plata</option>
+                      <option value="2">Hueso de Bronce</option>
+                  </select>
+              </div>
+              <div class="total col-12">
+                  <p id="total"></p>
+              </div>
+              <div class="buttons col-12 d-flex gap-1">
+                  <button id="btnBorrar" class="btn col-6">Borrar</button>
+                  <button id="btnEnviar" type="submit" class="btn col-6">Enviar</button>
+              </div>
+          </form>
+        </div>
+
+      </div>
     </section>
 
   </main>

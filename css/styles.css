@@ -130,6 +130,28 @@ h3 {
     border: 1px solid #333;
 }
 
+/* --Section: donacion--*/
+
+
+.total{
+    background-color: #cce5ff;
+    height: 2.5em;
+    border-radius: 5px;
+}
+
+.total p{
+    margin: 8px;
+}
+
+.buttons button{
+    background-color: #97c93e;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.buttons button:hover{
+    background-color: #c8f876;
+}
 /* --FOOTER-- */
 
 #footer {
