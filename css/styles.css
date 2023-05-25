@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+/*font-family: 'Lora', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;1,600&display=swap');
+/*font-family: 'Source Sans Pro', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Lora', serif;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* --HEADER-- */
+
+.header {
+    font-family: 'Lora', serif;
+    background-color: #5f9ef096;
+}
+
+.header a {
+    color: white;
+}
+
+.header a:hover {
+    color: #2a1923;
+}
+
+.header img {
+    filter: invert(100%);
+}
+
+.logo {
+    transition: .5s all;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: .5s all;
+}
+
+/* --MAIN-- */
+
+/* --Section:Banner-- */
+.banner {
+    height: 60vh;
+}
+
+.img-banner {
+    height: 100%;
+    object-fit: fill;
+}
+
+.frase {
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+/* --Section:Duenio-- */
+
+.duenios {  
+    background-color: #5f9ef096;
+}
+
+.card {
+    width: 250px;
+    transition: .5s all;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: .5s all;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.img-card {
+    height: 250px;
+}
+
+/* --Section:ubicacion-- */
+
+#ubicacion {
+    background-color: #fff;
+    color: #2a1923;
+}
+
+.mapa {
+    border-radius: 25px;
+}
+
+/* --Section:contactanos-- */
+
+#contactanos {
+    background-color: #5f9ef096;
+}
+
+.formulario {
+    background-color: #5f9ef096;
+}
+
+.input{
+    width: 30vw;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+/* --FOOTER-- */
+
+#footer {
+    background-color: #fff;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+#footer a:hover {
+    color: #5f9ef096;
+}
+
+/*  --MEDIA QUERYS-- */
+
+@media screen and (max-width: 800px){
+    .frase {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    iframe {
+        width: 250px;
+    }
+}
