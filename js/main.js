@@ -12,6 +12,7 @@ const cards = document.getElementsByClassName("card-hueso")
 const totalTag = document.getElementById('total')
 const form = document.forms.formulario
 const btnBorrar = document.getElementById('btnBorrar')
+const btnEnviar = document.getElementById('btnEnviar')
 
 // --> Funciones
 const cardSelected = (e) => {
@@ -59,10 +60,29 @@ const reset = (e) => {
     totalTag.innerHTML = ''
 }
 
+const enviar = (e) => {
+    e.preventDefault()
+
+    const {nombre, apellido, email, tickets, categorias} = form
+    
+    const verificado = {
+        nombre: nombre.value !== "",
+        apellido: apellido.value !== "",
+        email: email.value.includes('@'),
+        tickes: tickets.value > 0,
+        categoria: categorias.value !== 'none'
+    }
+
+    const values = Object.values(verificado)
+    const submitAccepted = values.every(value => value)
+    submitAccepted ? alert("Enviado") : alert("Faltan completar campos")
+}
+
 for (let card of cards){
     card.addEventListener('click', cardSelected)
-    form.categorias.addEventListener('change', categorySelected)
 
+    form.addEventListener('submit', enviar)
+    form.categorias.addEventListener('change', categorySelected)
     form.tickets.addEventListener('change', ticketSelected)
     form.tickets.addEventListener('keyup', ticketSelected)
 
