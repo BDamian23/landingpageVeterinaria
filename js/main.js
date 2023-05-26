@@ -10,7 +10,9 @@ let precios = [2000, 1000, 500]
 // --> Manejo del DOM
 const cards = document.getElementsByClassName("card-hueso")
 const totalTag = document.getElementById('total')
+
 const form = document.forms.formulario
+
 const btnBorrar = document.getElementById('btnBorrar')
 const btnEnviar = document.getElementById('btnEnviar')
 
@@ -75,7 +77,7 @@ const enviar = (e) => {
 
     const values = Object.values(verificado)
     const submitAccepted = values.every(value => value)
-    submitAccepted ? alert("Enviado") : alert("Faltan completar campos")
+    submitAccepted ? location.href="./enviado.html" : alert("Faltan completar campos")
 }
 
 for (let card of cards){
