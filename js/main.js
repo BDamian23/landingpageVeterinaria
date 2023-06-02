@@ -9,6 +9,8 @@ let precios = [2000, 1000, 500]
 
 // --> Manejo del DOM
 const cards = document.getElementsByClassName("card-hueso")
+const arrayCards = document.querySelectorAll('.card-donacion')
+console.log(arrayCards)
 const totalTag = document.getElementById('total')
 
 const form = document.forms.formulario
@@ -17,15 +19,23 @@ const btnBorrar = document.getElementById('btnBorrar')
 const btnEnviar = document.getElementById('btnEnviar')
 
 // --> Funciones
+
+function setColor(card) {
+    arrayCards[card].classList.add('set-color')
+}
+
+
 const cardSelected = (e) => {
     cardElegida = e.currentTarget.id
     categoriaElegida = cardElegida
     form.categorias.value = cardElegida
+    setColor(cardElegida)
 }
 
 const categorySelected = (e) => {
     categoriaElegida = e.target.value
     cardElegida = categoriaElegida
+    setColor(categoriaElegida)
 }
 
 const precioTotal = () => {
