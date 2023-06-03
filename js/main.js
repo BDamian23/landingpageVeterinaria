@@ -10,7 +10,6 @@ let precios = [2000, 1000, 500]
 // --> Manejo del DOM
 const cards = document.getElementsByClassName("card-hueso")
 const arrayCards = document.querySelectorAll('.card-donacion')
-console.log(arrayCards)
 const totalTag = document.getElementById('total')
 
 const form = document.forms.formulario
@@ -20,22 +19,15 @@ const btnEnviar = document.getElementById('btnEnviar')
 
 // --> Funciones
 
-function setColor(card) {
-    arrayCards[card].classList.add('set-color')
-}
-
-
 const cardSelected = (e) => {
     cardElegida = e.currentTarget.id
     categoriaElegida = cardElegida
     form.categorias.value = cardElegida
-    setColor(cardElegida)
 }
 
 const categorySelected = (e) => {
     categoriaElegida = e.target.value
     cardElegida = categoriaElegida
-    setColor(categoriaElegida)
 }
 
 const precioTotal = () => {
@@ -72,12 +64,12 @@ const reset = (e) => {
     totalTag.innerHTML = ''
 }
 
-const enviar = (e) => {
+const submit = (e) => {
     e.preventDefault()
 
     const {nombre, apellido, email, tickets, categorias} = form
     
-    const verificado = {
+    const verify = {
         nombre: nombre.value !== "",
         apellido: apellido.value !== "",
         email: email.value.includes('@'),
@@ -85,7 +77,7 @@ const enviar = (e) => {
         categoria: categorias.value !== 'none'
     }
 
-    const values = Object.values(verificado)
+    const values = Object.values(verify)
     const submitAccepted = values.every(value => value)
     submitAccepted ? location.href="./enviado.html" : alert("Faltan completar campos")
 }
@@ -93,13 +85,10 @@ const enviar = (e) => {
 for (let card of cards){
     card.addEventListener('click', cardSelected)
 
-    form.addEventListener('submit', enviar)
+    form.addEventListener('submit', submit)
     form.categorias.addEventListener('change', categorySelected)
     form.tickets.addEventListener('change', ticketSelected)
     form.tickets.addEventListener('keyup', ticketSelected)
 
     btnBorrar.addEventListener('click', reset)
 }
-
-
-
